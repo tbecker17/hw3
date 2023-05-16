@@ -1,0 +1,11 @@
+<h1>Create New Post for <%= @place.name %></h1>
+<%= form_with model: [@place, @post], url: place_posts_path(@place) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+  <%= form.label :date %>
+  <%= form.date_field :date %>
+  <%= form.hidden_field :place_id, value: @place.id %>
+  <%= form.submit 'Create Post' %>
+<% end %>
