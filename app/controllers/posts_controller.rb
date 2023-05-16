@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @place = Place.find(params[:place_id])
     @post = @place.posts.new(post_params)
     if @post.save
-      redirect_to place_path(@place)
+      redirect_to layout_place_path(@place)
     else
       render :new
     end

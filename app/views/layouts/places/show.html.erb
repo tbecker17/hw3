@@ -3,8 +3,8 @@
 <ul>
   <% @place.posts.each do |post| %>
     <li>
-      <%= link_to post.title, place_post_path(@place, post) %>
+      <%= link_to post.title, layout_place_post_path(@place, post) %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'Create New Post', new_place_post_path(@place) %>
+<%= link_to 'Create New Post', new_layout_place_post_path(@place) %>

@@ -1,5 +1,5 @@
 <h1>Create New Post for <%= @place.name %></h1>
-<%= form_with model: [@place, @post], url: place_posts_path(@place) do |form| %>
+<%= form_with model: [@place, @post], url: layout_place_posts_path(@place) do |form| %>
   <%= form.label :title %>
   <%= form.text_field :title %>
   <%= form.label :description %>

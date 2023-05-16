@@ -2,8 +2,8 @@
 <ul>
   <% @places.each do |place| %>
     <li>
-      <%= link_to place.name, place_path(place) %>
+      <%= link_to place.name, layout_place_path(place) %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'Create New Place', new_place_path %>
+<%= link_to 'Create New Place', new_layout_place_path %>

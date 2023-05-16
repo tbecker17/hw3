@@ -1,5 +1,5 @@
 <h1>Create New Place</h1>
-<%= form_with model: @place, url: places_path do |form| %>
+<%= form_with model: @place, url: layout_places_path do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.submit 'Create Place' %>
